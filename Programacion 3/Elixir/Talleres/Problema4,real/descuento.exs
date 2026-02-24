@@ -19,7 +19,7 @@ defmodule Descuento do
   end
 
   defp calcular_valor_descuento(valor_producto, porcentaje_descuento) do
-    valor_producto * (porcentaje_descuento / 100)
+    (valor_producto * porcentaje_descuento) / 100
   end
 
   defp calcular_valor_final(valor_producto, valor_descuento) do
