@@ -24,7 +24,6 @@ defmodule Parqueadero do
 
   def main do
 
-    # -------- VALIDACIÓN USUARIO --------
     nombre =
       "Ingrese nombre: "
       |> Util.ingresar(:texto)
@@ -39,7 +38,6 @@ defmodule Parqueadero do
     |> mostrar_mensaje()
 
 
-    # -------- PARQUEADERO --------
     hora_entrada = "Hora de entrada: " |> Util.ingresar(:entero)
     hora_salida1  = "Hora de salida: "  |> Util.ingresar(:entero)
     frecuente     = "¿Es cliente frecuente? (1 para sí, 0 para no): " |> Util.ingresar(:entero)
@@ -84,7 +82,6 @@ defmodule Parqueadero do
   end
 
 
-  # ---------------- VALIDACIONES ----------------
 
   def verificar_longitud({nombre, errores}) do
     longitud = String.length(nombre)
