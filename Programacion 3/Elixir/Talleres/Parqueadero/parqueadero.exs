@@ -58,16 +58,23 @@ defmodule Parqueadero do
   end
 
 
-  def tarifa_base(hora_entrada, hora_salida) do
-    hora = hora_salida - hora_entrada
+ def tarifa_base(hora_entrada, hora_salida) do
+  horas = hora_salida - hora_entrada
 
-    cond do
-      hora <= 5 -> 2500
-      hora <= 8 -> 2000
-      true -> 1500
-    end
+  cond do
+    horas <= 2 ->
+      3000
+
+    horas <= 5 ->
+      3000 + (horas - 2) * 2500 #se restan las 2 horas iniciales
+
+    horas <= 8 ->
+      3000 + (3 * 2500) + (horas - 5) * 2000 # se multiplican por 3 las 3 horas que ya pasaron y se restan -5 por las horas anteriores
+
+    true ->
+      18000
   end
-
+end
 
   def descuento(hora_entrada, hora_salida, frecuente, electrico, fin_de_semana, tarifa_base) do
     descuento_frecuente     = if frecuente == 1,      do: 0.15, else: 0.0
