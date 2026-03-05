@@ -29,12 +29,12 @@ defmodule PlataformaV do
 
     if usuario.nombre == nombre_usuario do
       IO.puts("Nombre coincide: #{Map.has_key?(usuario, :nombre)}")
-    else
+    else 
       IO.puts("Nombre no coincide: #{Map.has_key?(usuario, :nombre)}")
     end
 
     def numero_intentos() do
-      
+
     end
 
     acceso_permitido = Map.has_key?(usuario, :nombre) and Map.has_key?(usuario, :edad)

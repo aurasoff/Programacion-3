@@ -6,7 +6,7 @@ defmodule GestionOrdenes do
       :electronica -> 15_000
       :hogar       -> 10_000
       :alimentos   ->  5_000
-      _otro        -> 20_000
+      _otro        -> 20_000 nnnmn
     end
   end
 

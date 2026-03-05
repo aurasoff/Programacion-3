@@ -1,10 +1,15 @@
 defmodule Acceso do
   def main do
     # Ingresamos los datos del empleado
-    nombre = "Ingrese el nombre del empleado: " |> Util.ingresar(:texto)
-    edad = "Ingrese la edad: " |> Util.ingresar(:entero)
-    rol = "Ingrese el rol (administrador/auditor/operario): " |> Util.ingresar(:texto) |> String.to_atom()
-    departamento = "Ingrese el departamento: " |> Util.ingresar(:texto)
+    nombre = "Ingrese el nombre del empleado: "
+     |> Util.ingresar(:texto)
+    edad = "Ingrese la edad: "
+    |> Util.ingresar(:entero)
+    rol = "Ingrese el rol (administrador/auditor/operario): "
+     |> Util.ingresar(:texto)
+     |> String.to_atom()
+    departamento = "Ingrese el departamento: "
+     |> Util.ingresar(:texto)
 
     # Armamos la tupla y la enviamos a verificar
     {nombre, edad, rol, departamento}

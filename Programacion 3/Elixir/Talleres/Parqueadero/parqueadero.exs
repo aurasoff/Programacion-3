@@ -77,9 +77,9 @@ defmodule Parqueadero do
 end
 
   def descuento(hora_entrada, hora_salida, frecuente, electrico, fin_de_semana, tarifa_base) do
-    descuento_frecuente     = if frecuente == 1,      do: 0.15, else: 0.0
-    descuento_electrico     = if electrico == 1,      do: 0.20, else: 0.0
-    descuento_fin_de_semana = if fin_de_semana == 1,  do: 0.10, else: 0.0
+    descuento_frecuente= if frecuente == 1,      do: 0.15, else: 0.0
+    descuento_electrico= if electrico == 1,      do: 0.20, else: 0.0
+    descuento_fin_de_semana= if fin_de_semana == 1,  do: 0.10, else: 0.0
 
     total_descuento = descuento_frecuente + descuento_electrico + descuento_fin_de_semana
     valor_final = tarifa_base - (tarifa_base * total_descuento)
